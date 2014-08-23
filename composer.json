@@ -4,7 +4,8 @@
         "url": "https://github.com/ha1t/php-Pit"
     }],
     "require": {
-        "pit/pit": "*"
+        "pit/pit": "*",
+        "abraham/twitteroauth": "dev-master"
     }
 }
 
