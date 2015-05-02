@@ -17,7 +17,7 @@ composer.phar install
 
 # Usage
 
-はじめに、OAuthのトークンをセッティングします。  
+はじめに、`~/etc/secret` にOAuthトークンを記述します。  
 
 ```ini:~/etc/secret
 [twitter]
