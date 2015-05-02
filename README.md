@@ -1,4 +1,4 @@
-twitter-direct-message
+send-message
 ======================
 
 # Description
