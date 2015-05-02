@@ -1,11 +1,7 @@
 {
-    "repositories": [{
-        "type": "vcs",
-        "url": "https://github.com/ha1t/php-Pit"
-    }],
     "require": {
-        "pit/pit": "*",
-        "abraham/twitteroauth": "dev-master"
+        "abraham/twitteroauth": "dev-master",
+        "google/apiclient": "1.0.*@beta"
     }
 }
 
