@@ -17,23 +17,14 @@ composer.phar install
 
 # Usage
 
-はじめに、例えば、以下のようなスクリプトでOAuthのセッティングを行います。  
+はじめに、OAuthのトークンをセッティングします。  
 
-```php
-<?php
-
-$loader = require_once './vendor/autoload.php';
-$loader->add('Pit\\', ['./vendor/pit/pit/src']);
-
-
-$pit = new \Pit\Pit();
-$pit->set('twitter.com', ['data' => [
-    'consumerKey'       => '**********',
-    'consumerSecret'    => '**********',
-    'accessToken'       => '**********',
-    'accessTokenSecret' => '**********',
-]]);
-
+```ini:~/etc/secret
+[twitter]
+consumerKey = *****
+consumerSecret = *****
+accessToken = *****
+accessTokenSecret = *****
 ```
 
 コマンドを叩きます。  
