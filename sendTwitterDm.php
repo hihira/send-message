@@ -28,14 +28,12 @@ Twitterを使用して、指定したユーザにダイレクトメッセージ�
 
 if ($verbose) var_dump($screenName, $message);
 
-$loader = require_once './vendor/autoload.php';
-$loader->add('Pit\\', ['./vendor/pit/pit/src']);
-$loader->add('TwitterOAuth', ['./vendor/abraham/twitteroauth/twitteroauth']);
+require_once './vendor/autoload.php';
+use Abraham\TwitterOAuth\TwitterOAuth;
 
-$pit = new \Pit\Pit();
-$config = $pit->get('twitter.com');
+$secret = parse_ini_file(getenv('HOME')."/etc/secret", true);
 
-$TwitterOAuth = new TwitterOAuth($config['consumerKey'], $config['consumerSecret'], $config['accessToken'], $config['accessTokenSecret']);
+$TwitterOAuth = new TwitterOAuth($secret['twitter']['consumerKey'], $secret['twitter']['consumerSecret'], $secret['twitter']['accessToken'], $secret['twitter']['accessTokenSecret']);
 $TwitterOAuth->host = 'https://api.twitter.com/1.1/';
 if ($verbose) var_dump($TwitterOAuth);
 
